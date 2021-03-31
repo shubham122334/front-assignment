@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=lobster">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+        background-color: teal;
+    }
+    .hi-slide{
+        position: relative;
+        width: 800px;
+        height: 300px;
+        margin: 115px auto;
+    }  
+    @media only screen and (max-width: 600px) {
+  .hi-slide {
+    width: 60%;
+    justify-self: center;
+  }
+}     
+    .hi-slide .hi-next,.hi-slide .hi-prev{
+        position:absolute;
+        top:50%;
+        width:40px;
+        height: 40px;
+        margin-top: -20px;
+        line-height: 40px;
+        border-radius: 50px;
+        font-size: 20px;
+        transition:all 0.7s;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: white;
+        text-align:center;
+    }
+    .hi-slide .hi-next:hover,
+    .hi-slide .hi-prev:hover{
+        opacity: 1;
+        background-color: white;
+
+    }
+    .hi-slide .hi-prev{
+        left:-70px;
+
+    }
+    .hi-slide .hi-prev::before{
+        content: '<';
+
+    }
+    
+    .hi-slide .hi-next::before{
+        content: '>';
+
+    }
+    .hi-slide .hi-next{
+        right:-70px;
+
+    }
+    .hi-slide >ul{
+        list-style: none;
+        position: relative;
+        width:800px;
+        height: 300px;
+        padding: 0;
+        margin: 0;
+    }
+    .hi-slide >ul >li{
+        overflow:hidden;
+        position: absolute;
+        z-index: 0;
+        left: 377px;
+        top:147px;
+        height: 0;
+        border:3px solid white ;
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+    .hi-slide > ul > li > img{
+        width: 100%;
+        height: 100%;
+        background-position: center;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-12">
+            <div class="slide hi-slide">
+        <div class="hi-prev"></div>
+        <div class="hi-next"></div>
+        <ul>
+            <li>
+                <img src="https://wallpaperaccess.com/full/30100.jpg" alt="" srcset="">
+            </li>
+            <li>
+                <img src="https://wonderfulengineering.com/wp-content/uploads/2014/10/wallpaper-photos-31.jpg" alt="" srcset="">
+            </li>
+            <li>
+                <img src="https://wallpaperaccess.com/full/271965.jpg" alt="" srcset="">
+            </li>
+            <li>
+                <img src="https://wallpaperaccess.com/full/477393.jpg" alt="" srcset="">
+            </li>
+            <li>
+                <img src="https://wallpapercave.com/wp/wp2960860.jpg" alt="" srcset="">
+            </li>
+            <li>
+                <img src="https://lh3.googleusercontent.com/proxy/Z0gjGcZDw6jcO63liOQ1ANlIXd-HDnPtCec6VjaT_9Q34cIEBbjDc0cHAXL8WtA_ZgzvCmGxKv_i2cfryispH1B1hyBR1ZXKFYIm5fvNyGW02lZjx4foCqYhOTOcArPGdindlqAwq13dWjSpE91cXdAM"alt="" srcset="">
+            </li>
+            <li>
+                <img src="https://fsa.zobj.net/crop.php?r=InzbtmXscw3rLyv4t8XH4MbergB0QC1dPXk52ElFT3FuaMseuowTc8z8wTGuk8Z8zn3yTEXZY0gIVvcdVZdEvNS4G4ETYO79TFSw2u831S9BrZtbWaYAXIcfNwRalCLfa5jTxEOp1FGATWSK"alt="" srcset="">
+            </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+    </div>
+    <script src="js/jquery.hislide.js"></script>
+    <script>
+    $('.slide').hiSlide();
+    </script>
+</body>
+</html>
